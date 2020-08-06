@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "ProjectComSciMyapp",
+  "appName": "MyappProject",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
