@@ -1,0 +1,7 @@
+{
+  "name": "ProjectComSciMyapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
