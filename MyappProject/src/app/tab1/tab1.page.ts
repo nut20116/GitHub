@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class Tab1Page {
   mytextusername;
   login() {
-    alert('Hello '+this.mytextusername)
+    alert("hello"+ this.mytextusername);
   }
 
 }
