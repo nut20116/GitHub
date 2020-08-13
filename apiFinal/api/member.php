@@ -19,6 +19,8 @@ $app->post('/member/login', function (Request $request, Response $response, arra
     $result = $stmt->get_result();
     $data = array();
     while($row = $result->fetch_assoc()){
+
+        
         array_push($data,$row);
     }
 
