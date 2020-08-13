@@ -61,13 +61,30 @@ $app->post('/member/register', function (Request $request, Response $response, a
     $conn = $GLOBALS['dbconn']; 
     $body = $request->getBody();
     $bodyArray = json_decode($body, true);
-    $stmt = $conn->prepare("insert into patient"."(FIRSTNAME,LASTNAME,JOB,DATE,TIME,PROVINCE,SEX) "." values (?,?,?,?,?,?,?)"); 
-    $stmt ->bind_param('sssssss', $bodyArray['FIRSTNAME'],$bodyArray['LASTNAME'],$bodyArray['JOB'],$bodyArray['DATE'],$bodyArray['TIME'],$bodyArray['PROVINCE'],$bodyArray['SEX']);
+    $stmt = $conn->prepare("insert into member"."(user_member ,password_member,firstname_member,lasname__member,email_member,address_member,telephone_member,status_member) "." values (?,?,?,?,?,?,?,?)"); 
+    $stmt ->bind_param('ssssssss', $bodyArray['user_member'],$bodyArray['password_member'],$bodyArray['firstname_member'],$bodyArray['lasname__member'],$bodyArray['email_member'],$bodyArray['address_member'],$bodyArray['telephone_member'],$bodyArray['status_member']);
     $stmt->execute(); 
     $result = $stmt ->affected_rows;
-    $response->getBody() ->write($result."");
+    $response->getBody() ->write($result."555");
     return $response->withHeader('Content-Type', 'application/json');
 });
 
+$app->get('/member', function (Request $request, Response $response, array $args) {
+    
+    $conn = $GLOBALS['dbconn']; // groblas หาทั้ง project
+    $sql = "select * from member";
+    $result = $conn->query($sql);
+    // $num = $result->num_rows;
+    $data = array();
+    while($row = $result->fetch_assoc()){
+        array_push($data,$row);
+    }
+
+    $json = json_encode($data);
+    $response->getBody()->write($json);
+
+    // $response->getBody()->write("Number rows, $num");
+    return $response->withHeader('Content-Type','application/json');
+});
 
 ?>
