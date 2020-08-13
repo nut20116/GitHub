@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,6 +12,9 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-input [(ngModel)] ="mytextusername" >Username</ion-input>
+  <ion-input>Password</ion-input>
+  <ion-button (click) = "login()">Login</ion-button>
+  
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
