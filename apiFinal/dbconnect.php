@@ -2,6 +2,6 @@
     $servername = "localhost";
     $username = "root";
     $password = "root123";
-    $dbname = "databasefinalproject";
+    $dbname = "finalproject";
     $dbconn = new mysqli($servername,$username,$password,$dbname);
 ?>
