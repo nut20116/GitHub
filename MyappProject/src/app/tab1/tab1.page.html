@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,12 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-input [(ngModel)] ="username" placeholder="username"></ion-input>
+  <ion-input [(ngModel)] ="password"type="password" placeholder="password"></ion-input>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-button expand="block" color="secondary"(click)="login()">Login</ion-button>
+  <ion-button expand="block" fill="outline" [routerLink]="'/register'">register</ion-button>
+
+
+  
 </ion-content>
