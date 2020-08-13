@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  mytextusername;
+  username;
+  password;
   login() {
-    alert("hello"+ this.mytextusername);
+    alert("hello"+ this.username);
   }
 
+  register() {
+
+  }
 }

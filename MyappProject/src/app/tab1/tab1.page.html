@@ -12,9 +12,12 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-input [(ngModel)] ="mytextusername" >Username</ion-input>
-  <ion-input>Password</ion-input>
-  <ion-button (click)="login()">Login</ion-button>
-  
+  <ion-input [(ngModel)] ="username" placeholder="username"></ion-input>
+  <ion-input [(ngModel)] ="password"type="password" placeholder="password"></ion-input>
+
+  <ion-button expand="block" fill="outline" (click)="login()">Login</ion-button>
+  <ion-button expand="block" color="secondary" [routerLink]="'/register'">register</ion-button>
+
+
 
 </ion-content>
