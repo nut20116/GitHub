@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-home',
@@ -8,8 +7,6 @@ import {HttpClient} from "@angular/common/http";
 })
 export class HomePage {
 
-  constructor(private Http: HttpClient) {
-
-  }
+  constructor() {}
 
 }
