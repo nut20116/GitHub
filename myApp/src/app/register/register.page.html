@@ -1,0 +1,79 @@
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label position="floating">username</ion-label>
+    <ion-input [(ngModel)] ="username" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">password</ion-label>
+    <ion-input [(ngModel)] ="password" type="password" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">email</ion-label>
+    <ion-input [(ngModel)] ="email" type="email" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">firstname</ion-label>
+    <ion-input [(ngModel)] ="firstname" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">lastname</ion-label>
+    <ion-input [(ngModel)] ="lastname" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Address</ion-label>
+    <ion-textarea [(ngModel)] ="address" ></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">telephone</ion-label>
+    <ion-input [(ngModel)] ="telephone" type="tel" ></ion-input>
+  </ion-item>
+
+
+  <ion-list>
+    <ion-radio-group [(ngModel)] ="status" value="status">
+      <ion-list-header>
+        <ion-label>status</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>owner</ion-label>
+        <ion-radio slot="start" value="owner"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>user</ion-label>
+        <ion-radio slot="start" value="user"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button expand="block" color="secondary"(click)="register()" >register</ion-button>
+
+  <ion-button expand="block" fill="outline"  color="danger" [routerLink]="'/login'" >Cancel</ion-button>
+
+
+
+</ion-content>
+
