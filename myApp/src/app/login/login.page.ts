@@ -34,4 +34,8 @@ export class LoginPage implements OnInit {
       window.alert("login fail");
     });
   }
+
+  segmentChanged(valuedegree: any) {
+    console.log(valuedegree);
+  }
 }

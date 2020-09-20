@@ -5,7 +5,7 @@
       <ion-img style="width: 60px; height: 60px;" src="assets/img/jongsanam-logo.png"></ion-img>
     </ion-toolbar>
   </ion-header>
-
+<ion-content>
   <ion-item>
     <ion-label position="floating">username</ion-label>
     <ion-input [(ngModel)] ="username" ></ion-input>
@@ -17,7 +17,21 @@
   </ion-item>
   <br>
   <br>
-  <br>
 
+
+  <ion-segment [(ngModel)]="valuedegree" (ionChange)="segmentChanged(valuedegree)">
+    <ion-segment-button value="owner">
+      <ion-label>เจ้าของสนาม</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="customer">
+      <ion-label>ลูกค้า</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <br>
+  <br>
   <ion-button expand="block" color="secondary"(click)="login()">Login</ion-button>
   <ion-button expand="block" fill="outline" [routerLink]="'/register'">register</ion-button>
+
+</ion-content>
+
+
