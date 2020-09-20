@@ -15,10 +15,6 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'myhome',
-    loadChildren: () => import('../app/tabs/myhome/myhome.module').then( m => m.MyhomePageModule)
-  },
-  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
