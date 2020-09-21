@@ -10,4 +10,6 @@ $app->setBasePath("/apiFinal");
 
 require __DIR__. '/dbconnect.php';
 require __DIR__. '/api/member.php';
+require __DIR__. '/api/selectsearch.php';
+require __DIR__. '/api/picturefield.php';
 $app->run();
