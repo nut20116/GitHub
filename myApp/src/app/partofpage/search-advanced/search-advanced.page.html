@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <div>
+      <ion-title>searchAdvanced</ion-title>
+    </div>
+
+    <div>
+      <ion-back-button style="margin-right: 290px"  defaultHref="/search"></ion-back-button >
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-range dualKnobs="true" [min]=timeMin [max]=timeMax step="3"
+              [(ngModel)]="time" (ionChange)="setBadge(time)" ></ion-range>
+  <div >
+    <ion-item>
+      <ion-text color="primary">{{this.timeMin2}} - </ion-text>
+      <ion-text color="primary">{{this.timeMax2}}บาท</ion-text>
+    </ion-item>
+  </div>
+  <ion-item>
+    <ion-label>Select: province</ion-label>
+    <ion-select class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
+      <ion-select-option  *ngFor="let province of this.selectedprovince "
+                          value="{{province.id}}"> {{province.name_th}} </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Select: amphures</ion-label>
+    <ion-select class="custom-options" [(ngModel)]="mySelectamphures" (ionChange)="selectedamphuresmethod(mySelectamphures)">
+      <ion-select-option  *ngFor="let amphures of this.selectedamphures "
+                          value="{{amphures.id}}"> {{amphures.name_th}} </ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Time</ion-label>
+    <ion-datetime displayFormat="DD : MMMM"></ion-datetime>
+  </ion-item>
+
+
+
+</ion-content>
+
+<ion-button color="success" [routerLink]="'/tabs/search'">Success</ion-button>
+

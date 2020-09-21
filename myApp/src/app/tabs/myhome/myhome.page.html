@@ -1,0 +1,19 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>myhome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+      <ion-list>
+        <ion-item *ngFor="let store of this.getstore" (click)="clickstore(store.id_store)">
+            <img style="width: 150x; height: 150px;" src="data:image/png;base64,{{store.picture_store}}">
+          {{store.name_store}} เบอร์โทร {{store.telephone_store}}
+        </ion-item>
+      </ion-list>
+
+</ion-content>
+
