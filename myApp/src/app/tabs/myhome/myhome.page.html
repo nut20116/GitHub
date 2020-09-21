@@ -9,7 +9,7 @@
 <ion-content>
 
       <ion-list>
-        <ion-item *ngFor="let store of this.getstore" (click)="clickstore()">
+        <ion-item *ngFor="let store of this.getstore" (click)="clickstore(store.id_store)">
             <img style="width: 150x; height: 150px;" src="data:image/png;base64,{{store.picture_store}}">
           {{store.name_store}} เบอร์โทร {{store.telephone_store}}
         </ion-item>

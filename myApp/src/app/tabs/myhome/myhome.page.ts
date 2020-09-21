@@ -8,7 +8,8 @@ import {HttpClient} from "@angular/common/http";
 })
 export class MyhomePage implements OnInit {
     getstore: any;
-
+    idstore: any;
+    getfield: any;
 
 
 
@@ -17,13 +18,22 @@ export class MyhomePage implements OnInit {
     this.Http.get('http://localhost/apiFinal/getstore')
         .subscribe(data => {
             this.getstore = data;
+            console.log(this.getstore);
         });
   }
 
   ngOnInit() {
   }
 
-    clickstore() {
-
+    clickstore(idstore) {
+      console.log(idstore);
+        let dataJSON = {
+            'id_store': idstore,
+        };
+        this.Http.post('http://localhost/apiFinal/getfield',JSON.stringify(dataJSON))
+            .subscribe(data => {
+                this.getfield = data;
+                console.log(this.getfield);
+            });
     }
 }
