@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
+import {DatapassService} from '../datapass.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginPage implements OnInit {
   password: any;
 
 
-  constructor(private Http: HttpClient,private router: Router) { }
+  constructor(private Http: HttpClient, private router: Router, public datapassService: DatapassService) { }
 
   ngOnInit() {
   }
@@ -28,6 +29,7 @@ export class LoginPage implements OnInit {
       console.log("login complete");
       let navigate = this.router.navigate(['/home']);
       console.log(data);
+      this.datapassService = this.data;
     },error => {
       let navigate = this.router.navigate(['/login']);
       console.log("login error");
