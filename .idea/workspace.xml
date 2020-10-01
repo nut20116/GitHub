@@ -52,6 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1601519400237</updated>
       <workItem from="1601519401623" duration="305000" />
+      <workItem from="1601520351754" duration="34000" />
     </task>
     <servers />
   </component>
@@ -68,6 +69,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="647" y="310" key="Github.ShareDialog" timestamp="1601519524887">
